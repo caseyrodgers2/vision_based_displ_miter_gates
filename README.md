@@ -11,16 +11,37 @@ A link to the conference paper will be posted here once it becomes available.
 
 If you use any part of this code, ideas, or figures below, please be sure to cite both papers!!
  
-I was the main or sole developer of several MATLAB scripts for both of these papers including:
+I was the sole developer of several MATLAB scripts for both of these papers including:
 
-* Robust KLT-based optical flow method for displacement measurement (motion_compensate_homography_klt_video.m)
 * Visualization script that displays the displacement and displacement errors as a heat map on an image of the structure (disp_heatmap.m)
-* Animation script that displays how the displacements change over time along the height of the gate (miterGatePlotAnimation.m)
 * Light normalization for all specified images in a folder (light_normalization.m)
 * Creates a video from images in a specified folder (createVideo.m)
 
+I was also the primary developer of this script with minor edits from my co-author Shuo Wang:
+* Animation script that displays how the displacements change over time along the height of the gate (miterGatePlotAnimation.m)
 
- Very detailed descriptions of what each script does and how it works can be found in the following sections. For references for this README, please see the papers and their references.
+Additionally, I heavily expanded upon and added new features to this script.
+* Robust KLT-based optical flow method for displacement measurement (motion_compensate_homography_klt_video.m)
+
+The original 407 line script was written by co-author Shaik Althaf V. Shajihan and can be found on his Github here. Shuo Wang also contributed to this original script. The original script performed feature-based multi-ROI (Region of Interest) tracking for two images with adjustments for camera motion via homography and produced a quiver plot between both images. Additionally, a user could manually select ROI feature points and then later save and load those feature points to reduce additional manual effort.
+
+Afterwards, I heavily expanded the script to include new features such as:
+* 51 user options with associated functionality to increase flexibility for a variety of image sets
+* Feature-based multi-ROI tracking for a series of images in a folder rather than just two images
+* Flexible plotting functions to allow the user to plot the displacement in a variety of ways including over time, per point, and per ROI
+* Ability to load specific static and nonstatic points of interest to track from an Excel file of pixel locations
+* Ability to load and save ROIs rather than specific feature points to allow for increased flexibility for feature selection for the same ROIs
+* Ability to undistort images for improved tracking
+* Light normalization for ROIs for improved tracking
+* Averaged displacements across time and for an ROI in order to better see trends and reduce the effect of outliers
+* Quiver plot videos rather than a single image
+* Increased modularity and improved readability by refactoring the code
+
+With these new features and expansions, the script was significantly enhanced for improved flexibility and robustness in a variety of field conditions often experienced by large civil infrastructure.
+
+Throughout this deep expansion process, both Shuo Wang and Shaik Althaf V. Shajihan made minor edits.
+
+Very detailed descriptions of what each script does and how it works can be found in the following sections. For references for this README, please see the papers and their references.
 
  Note: None of the data or results are given due to security reasons.
 
