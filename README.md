@@ -7,7 +7,7 @@ https://www.sciencedirect.com/science/article/pii/S0141029623000883
 
 We also released a conference paper at the International Workshop on Structural Health Monitoring (IWSHM) 2023 that focuses more on the vision-based displacements measurement part.
 
-A link to the conference paper will be posted here once it becomes available.
+The conference paper can be found here: https://www.dpi-proceedings.com/index.php/shm2023/article/view/36799
 
 If you use any part of this code, ideas, or figures below, please be sure to cite both papers!!
  
